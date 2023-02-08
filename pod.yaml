@@ -8,7 +8,7 @@ spec:
   containers:
   - name: ubuntu
     image: ubuntu:latest
-    command: ["nsenter", "--pid=/proc/1/ns/pid", "--", "/bin/bash"]
+    command: ["nsenter", "--mount=/proc/1/ns/mnt", "--", "/bin/bash"]
     stdin: true
     tty: true
     securityContext:
